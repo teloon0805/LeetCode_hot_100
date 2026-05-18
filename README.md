@@ -30,7 +30,7 @@ LeetCode Top 100 Algorithm Problems Explained
 
 ### 代码实现 (C++)
 
-**#### 方法一：暴力枚举代码**
+#### 方法一：暴力枚举代码
 ```cpp
 class Solution {
 public:
@@ -47,7 +47,8 @@ public:
     }
 };
 
-**#### 方法二：哈希表代码**
+---
+#### 方法二：哈希表 (Hash Map) 
 ```cpp
 #include <unordered_map>
 #include <vector>
