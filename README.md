@@ -30,7 +30,7 @@ LeetCode Top 100 Algorithm Problems Explained
 
 ### 代码实现 (C++)
 
-#### 方法一：暴力枚举代码
+**#### 方法一：暴力枚举代码**
 ```cpp
 class Solution {
 public:
@@ -44,5 +44,30 @@ public:
             }
         }
         return {}; 
+    }
+};
+
+**#### 方法二：哈希表代码**
+```cpp
+#include <unordered_map>
+#include <vector>
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        std::unordered_map<int, int> numMap; // key: 数字, value: 下标
+        
+        for (int i = 0; i < nums.size(); i++) {
+            int complement = target - nums[i]; // 计算需要的另一个数
+            
+            // 如果在哈希表中找到了需要的数
+            if (numMap.count(complement)) {
+                return {numMap[complement], i}; // 返回两个数的下标
+            }
+            
+            // 如果没找到，就把当前数字和下标存入哈希表
+            numMap[nums[i]] = i;
+        }
+        return {};
     }
 };
