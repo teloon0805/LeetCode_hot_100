@@ -45,9 +45,9 @@ public:
         }
         return {}; 
     }
-};
+};```
 
----
+
 #### 方法二：哈希表 (Hash Map) 
 ```cpp
 #include <unordered_map>
@@ -72,3 +72,4 @@ public:
         return {};
     }
 };
+```
